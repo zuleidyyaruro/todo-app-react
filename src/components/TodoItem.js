@@ -1,5 +1,7 @@
 import React from 'react'
 import { useForm } from "react-hook-form";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEdit } from '@fortawesome/free-solid-svg-icons'
 
 const TodoItem = ({ toDos, handleUpdate, setIsCompleted }) => {
 
@@ -15,18 +17,18 @@ const TodoItem = ({ toDos, handleUpdate, setIsCompleted }) => {
     }
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form className="form-item" onSubmit={handleSubmit(onSubmit)}>
             {
                 toDos.isCompleted ?
                     <>
                         <input type="checkbox" id="is-completed" checked  {...register("completed")} />
-                        <button onClick={() => handleUpdate(toDos.id)}>Update</button>
+                        <button onClick={() => handleUpdate(toDos.id)}> <FontAwesomeIcon icon={faEdit} /></button>
                     </>
 
                     :
                     <>
                         <input type="checkbox" id="is-completed" {...register("completed")} />
-                        <button onClick={() => handleUpdate(toDos.id)}>Update</button>
+                        <button onClick={() => handleUpdate(toDos.id)}> <FontAwesomeIcon icon={faEdit} /></button>
                     </>
 
             }

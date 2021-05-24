@@ -1,5 +1,126 @@
+:root {
+  --color-primary: #185adb;
+  --color-secundary:#0a1931;
+  --text-color: #f8eded;
+  --color-auxiliar: #344fa1;
+  --color-auxiliar2:#ffc947;
+  --color-auxiliar3:#ffc847bb;
+  --color-auxiliar4:#304261;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-primary);
+}
+
+.App {
+  background-color: var(--color-secundary);
+  width: 90%;
+  margin: auto;
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+}
+
+@media(min-width:768px){
+  .App {
+    width: 40%;
+  }
+}
 
 .container-todo {
   display: flex;
   flex-direction: column;
+  padding: 1rem;
+  
+}
+
+h1 {
+  text-align: center;
+  color:var(--text-color);
+  padding: 1rem;
+}
+
+.form-create {
+  padding: 1rem;
+  text-align: center;
+}
+
+.form-create input { 
+  width: 100%;
+  margin-bottom: .5rem;
+  padding: .7rem 0;
+  border-radius: .3rem;
+  border: none;
+  background-color: var(--color-auxiliar);
+  color:var(--text-color);
+  font-size: 1rem;
+}
+
+.form-create button {
+  width: 100%;
+  margin-bottom: .5rem;
+  padding: .7rem 0;
+  border-radius: .3rem;
+  border: none;
+  background-color: var(--color-auxiliar2);
+}
+
+@media(min-width:768px){
+  .form-create button {
+    width: 50%;
+  }
+}
+
+.form-create button:hover {
+  cursor: pointer;
+  background-color: var(--color-auxiliar3);
+}
+
+::placeholder {
+  color: var(--text-color);
+  font-size: .8rem;
+  padding: .5rem;
+}
+
+.container-list {
+  background-color: var(--color-auxiliar4);
+  padding: 0.5rem 1rem;
+  margin: 0 0 .5rem 0;
+  border-radius: .3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--text-color);
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.container-list button {
+  background-color: var(--color-auxiliar4);
+  color: var(--text-color);
+  border: none;
+}
+
+.container-list button:hover {
+  cursor: pointer;
+}
+
+.tasks {
+  display: flex;
+}
+
+.form-item input {
+  margin-right: 1rem;
+}
+
+.form-item  {
+  margin-right: 1rem;
+}
+
+.border {
+  border:solid 1px black
 }

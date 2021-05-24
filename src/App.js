@@ -9,6 +9,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1>ToDo App</h1>
       <CreateTodo setToDoCreate={setToDoCreate}/>
       <TodoContainer toDoCreate={toDoCreate}/>
     </div>

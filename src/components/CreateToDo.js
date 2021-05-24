@@ -11,12 +11,14 @@ const CreateTodo = ({ setToDoCreate }) => {
 
     return (
         <div>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form className="form-create" onSubmit={handleSubmit(onSubmit)}>
 
-                <label htmlFor="task">Task: </label>
-                <input id="task" {...register("task")} />
-                <label htmlFor="student">Estudent: </label>
-                <input {...register("student")} />
+                <div>
+                    <input placeholder="Write a task" id="task" {...register("task")} />
+                </div>
+                <div>
+                    <input placeholder="Write your name" {...register("student")} />
+                </div>
 
                 <button>Save</button>
             </form>
